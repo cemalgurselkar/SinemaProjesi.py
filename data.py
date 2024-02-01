@@ -14,7 +14,7 @@ class Film:
         self.id = id
         self.koltukBilgileri = koltukBilgileri
 
-def veriyiAl():
+def takeData():
     file = open("data.json")
     data = json.load(file)
     filmListesi = []
@@ -24,4 +24,4 @@ def veriyiAl():
         filmListesi.append(Film(filmIsmi,film['image'],film['id'],koltukBilgileri))
     return filmListesi
 
-filmListesi = veriyiAl()
+filmListesi = takeData()
